@@ -13,13 +13,18 @@ router.get('/', function(req, res, next) {
 /* GET gallery page. */
 router.get('/gallery', function(req, res, next) {
   var images = [];
+  var split,fileExtension;
 fs.readdir(imageFolder, (err, files) => {
   files.forEach(file => {
+    split = file.indexOf('.');
+    fileExtension = file.substr(split);
+    if(fileExtension == '.jpg' || fileExtension == '.jpeg' || fileExtension == '.tiff' || fileExtension == '.png' || fileExtension == '.svg' || fileExtension == '.gif' ){
+
     images.push(file);
+  }
   });
     res.render('gallery', { title: 'Gallery', images: images, message: '', error: false});
   });
-  // res.render('gallery', { title: 'Gallery' });
 });
 
 /* GET add image page. */
