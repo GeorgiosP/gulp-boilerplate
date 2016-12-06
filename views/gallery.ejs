@@ -1,33 +1,17 @@
 <% include partials/header %>
 <div class="main-container gallery">
-  <p class="main-header"><img src="images/gulp-title.svg" alt="Gulp Logo" width="150px"> <%=title%></p>
+  <p class="main-header"><img src="images/gulp-title.svg" alt="Gulp Logo" width="150px"> <%=title%>  <a href="/add" class="btn add">+</a>
+</p>
+<div class="image-container">
+
+  <% for(var i=0; i<images.length; i++){%>
+
+  <div class="image">
+    <img src="images/gallery/<%=images[i]%>" alt="">
+
 </div>
 
-<div class="image-container">
-  <div class="image">
-    <img src="images/gulp-title.svg" alt="">
+  <%}%>
 
-  </div>
-  <div class="image">
-    <img src="images/gulp-title.svg" alt="">
-
-  </div>
-  <div class="image">
-    <img src="images/gulp-title.svg" alt="">
-
-  </div>
-  <div class="image">
-    <img src="images/gulp-title.svg" alt="">
-
-  </div>
-
-  <div class="image">
-    <img src="images/gulp-title.svg" alt="">
-
-  </div>
-  <div class="image">
-    <img src="images/gulp-title.svg" alt="">
-
-  </div>
 </div>
 <% include partials/footer %>

@@ -4,6 +4,8 @@ body {
   padding: 50px;
   font-family: "Open Sans", sans-serif;
 }
+
+/**Nav stuff **/
 nav {
   text-align: center;
   display: flex;
@@ -17,10 +19,11 @@ nav {
 }
 
 .nav a:hover{
-  background-color: #fff;
-  color: black;
+  background-color: #fff !important;
+  color: black !important;
 }
 
+/** Page Headings **/
 .main-header {
   font-size: 46px;
 }
@@ -29,6 +32,7 @@ nav {
   font-size: 30px;
 }
 
+/** Main Containers **/
 .main-container {
   font-weight: 100;
   display: flex;
@@ -39,19 +43,20 @@ nav {
 .gallery {
   margin: 0;
 }
-.btn {
-  color: black;
-  background: white;
-  padding: 15px;
+
+.add-image {
   font-size: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn:hover {
-  color: #fff;
-  background-color: transparent;
-  border: 1px solid white;
+.add-image input {
+  align-self: center;
 }
 
+/** Gallery **/
 .image-container {
   display: flex;
   flex-flow: row;
@@ -70,10 +75,43 @@ nav {
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
 
 }
 .image img{
-  max-width: 90%;
-  height: 90%;
-  width: auto;
+  height: 95%;
+  width: 95%;
+  border-radius: 50%;
+}
+
+
+/** Button stuff */
+.btn {
+  color: black;
+  background: white;
+  padding: 15px;
+  font-size: 20px;
+}
+.btn:hover {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid white;
+}
+.add {
+  background-color: transparent !important;
+  color: white !important;
+  font-size: 40px !important;
+  padding: 0 19px 5px 19px !important;
+  border-radius: 50% !important;
+}
+.add:hover {
+  color: black !important;
+  background-color: white !important;
+}
+
+.submit {
+  font-size: 15px !important;
+  padding: 10px !important;
+  background-color: white !important;
+  color: black !important;
 }

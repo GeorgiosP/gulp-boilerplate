@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
-var gallery = require('./routes/gallery');
+var fileUpload = require('express-fileupload');
 
 var app = express();
 var port = 3000;
@@ -21,9 +21,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(fileUpload());
 
 app.use('/', routes);
-app.use('/gallery', gallery);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
