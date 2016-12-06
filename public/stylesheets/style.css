@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One');
+
 body {
   background-color: #cf4646;
   color: #FFFFFF;
   font-family: "Open Sans", sans-serif;
+
 }
 
 /**Nav stuff **/
@@ -94,13 +97,48 @@ nav {
 .btn:hover {
   color: #fff;
   background-color: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
 }
+
+.gulp-btn {
+  display: flex;
+  flex-flow: column;
+}
+a p {
+  font-family: 'Fugaz One', cursive;
+
+  font-size: 24px;
+  padding-top: 150px;
+  position: absolute;
+  align-self: center;
+  color: black;
+
+
+}
+
+a p:hover {
+  color: #cf4646;
+}
+
+.inputfile{
+	width: 0.1px;
+  display: block;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
 .add {
   background-color: transparent !important;
   color: white !important;
   font-size: 40px !important;
-  padding: 0 19px 5px 19px !important;
+  padding: 0 17px 0 17px !important;
   border-radius: 50% !important;
 }
 .add:hover {
