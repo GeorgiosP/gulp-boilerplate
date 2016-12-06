@@ -6,11 +6,23 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <%if(message && !error){ %>
+        <div class="alert-wrap">
+          <div class="alert alert-success"><%=message%></div>
+
+        </div>
+
+    <%}else if(message && error){ %>
+        <div class="alert-wrap">
+
+           <div class="alert alert-danger"><%=message%></div>
+       </div>
+    <%}%>
     <nav>
-  <div id="navbar" class="navbar-collapse collapse page-header">
-              <ul class="nav nav-pills">
+    <div id="navbar" class="navbar-collapse collapse page-header">
+            <ul class="nav nav-pills">
                 <li><a href="/">Home</a></li>
                 <li><a href="/gallery">Gallery</a></li>
-              </ul>
+            </ul>
   </div>
 </nav>

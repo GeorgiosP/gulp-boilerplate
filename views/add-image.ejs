@@ -1,11 +1,5 @@
 <% include partials/header %>
-<%if(message && !error){ %>
-       <div class="alert alert-success"><%=message%></div>
 
-<%}else if(message && error){ %>
-       <div class="alert alert-danger"><%=message%></div>
-
-<%}%>
 <div class="main-container add-image">
        <form ref='uploadForm' id='uploadForm'
                   action='http://localhost:3000/add'

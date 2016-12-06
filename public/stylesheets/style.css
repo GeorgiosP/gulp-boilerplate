@@ -1,7 +1,6 @@
 body {
   background-color: #cf4646;
   color: #FFFFFF;
-  padding: 50px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -114,4 +113,21 @@ nav {
   padding: 10px !important;
   background-color: white !important;
   color: black !important;
+}
+
+.alert-wrap {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.alert  {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  border-radius: 0;
+}
+
+.alert-danger {
+  color: maroon;
 }

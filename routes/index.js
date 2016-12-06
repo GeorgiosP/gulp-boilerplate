@@ -6,7 +6,7 @@ const fs = require('fs');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Tutorial' });
+  res.render('index', { title: 'Tutorial', message: '', error: false });
 });
 
 
@@ -17,7 +17,7 @@ fs.readdir(imageFolder, (err, files) => {
   files.forEach(file => {
     images.push(file);
   });
-    res.render('gallery', { title: 'Gallery', images: images});
+    res.render('gallery', { title: 'Gallery', images: images, message: '', error: false});
   });
   // res.render('gallery', { title: 'Gallery' });
 });
@@ -44,10 +44,10 @@ router.post('/add', function(req,res, next){
      if(fileExtension == '.jpg' || fileExtension == '.jpeg' || fileExtension == '.tiff' || fileExtension == '.png' || fileExtension == '.svg' || fileExtension == '.gif' ){
        sampleFile.mv('public/images/gallery/'+fileName+fileExtension, function(err) {
            if (err) {
-             res.render('add-image', {title: 'Gallery', message: err, error: true});
+             res.render('add-image', {title: 'Add Image to Gallery', message: 'Error uploading image', error: true});
            }
            else {
-               res.render('add-image', {title: 'Gallery', message: 'Image Added', error: false});
+               res.render('add-image', {title: 'Add Image to Gallery', message: 'Image Added', error: false});
            }
        });
      }else{
