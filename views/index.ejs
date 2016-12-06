@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include partials/header %>
+<div class="main-container">
+    <p class="main-header">Welcome to our <img src="images/gulp-title.svg" alt="Gulp Logo" width="150px"> Tutorial</p>
+    <p class="main-subheading">By: George, Jeremiah, Jeff and Amanda</p>
+    <button class="btn">Add Image</button>
+</div>
+<% include partials/footer %>
